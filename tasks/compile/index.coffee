@@ -1,5 +1,5 @@
 module.exports = (gulp, config) ->
-  require('./coffee-script.coffee') gulp, config
+  require('./script.coffee') gulp, config
   require('./jade.coffee') gulp, config
   require('./less.coffee') gulp, config
   require('./loopback-services.coffee') gulp, config
@@ -7,7 +7,7 @@ module.exports = (gulp, config) ->
   require('./vendor.coffee') gulp, config
 
   gulp.task 'compile', [
-    'compile:coffee'
+    'compile:script'
     'compile:less'
     'compile:jade'
     'compile:template'

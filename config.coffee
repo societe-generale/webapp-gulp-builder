@@ -24,6 +24,11 @@ config.input.coffee = [
   "#{config.input.path}/*.coffee"
   "#{config.input.path}/**/*.coffee"
 ]
+# Where to find Javascript files
+config.input.javascript = [
+  "#{config.input.path}/*.js"
+  "#{config.input.path}/**/*.js"
+]
 
 # Where to find less file(s)
 config.input.less = {}
