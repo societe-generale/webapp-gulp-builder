@@ -14,6 +14,7 @@ module.exports = (gulp, config) ->
     .pipe gif config.input.replace.enabled, replace config.input.replace
     .pipe jade
       pretty: not config.minify
+      locals: config.jade.locals
     .pipe gif config.minify, htmlmin
       collapseWhitespace: true
       removeComments: true

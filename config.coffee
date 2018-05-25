@@ -28,6 +28,7 @@ config.input = {}
 config.input.path = 'src'
 # Main index file
 config.input.jade = "#{config.input.path}/index.jade"
+config.jade.locals
 # Where to find templates
 config.input.template = [
   "#{config.input.path}/*.jade"
