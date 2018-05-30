@@ -17,7 +17,7 @@ module.exports = (gulp, config) ->
     .pipe filter '**/*.js'
     .pipe concat config.output.vendor
     .pipe gif config.minify, uglify()
-    .pipe sourcemaps.init()
-    .pipe sourcemaps.write()
+    .pipe gif not config.output.disable_sourcemaps, sourcemaps.init()
+    .pipe gif not config.output.disable_sourcemaps, sourcemaps.write()
     .pipe gulp.dest config.output.script
     .pipe livereload()

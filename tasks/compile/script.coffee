@@ -22,7 +22,7 @@ module.exports = (gulp, config) ->
     .pipe ngAnnotate()
     .pipe gif config.minify, uglify()
     .pipe concat config.output.application
-    .pipe sourcemaps.init()
-    .pipe sourcemaps.write()
+    .pipe gif not config.output.disable_sourcemaps, sourcemaps.init()
+    .pipe gif not config.output.disable_sourcemaps, sourcemaps.write()
     .pipe gulp.dest config.output.script
     .pipe livereload()

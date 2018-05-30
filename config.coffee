@@ -112,4 +112,6 @@ config.output.loopback.module = 'application.service'
 
 config.output.less = "#{config.output.path}/style"
 
+config.output.disable_sourcemaps = false
+
 module.exports = config
