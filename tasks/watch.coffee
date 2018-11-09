@@ -8,7 +8,10 @@ module.exports = (gulp, config) ->
         basePath: config.output.path
         reloadPage: "#{config.output.path}/index.html"
         start: true
-    gulp.watch config.input.coffee, ['compile:script', 'lint:coffee']
+    if config.lint == false
+      gulp.watch config.input.coffee, ['compile:script']
+    else
+      gulp.watch config.input.coffee, ['compile:script', 'lint:coffee']
     gulp.watch config.input.javascript, ['compile:script']
     if config.input?.less?.enabled
       gulp.watch config.input.less.watch, ['compile:less']
